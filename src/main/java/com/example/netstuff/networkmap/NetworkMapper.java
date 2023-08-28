@@ -5,10 +5,7 @@ import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.util.Enumeration;
-
-/*
-  Network Mapper.
- */
+//Network Mapper.
 
 public class NetworkMapper {
 

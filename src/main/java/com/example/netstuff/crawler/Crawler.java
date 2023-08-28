@@ -1,5 +1,6 @@
 package com.example.netstuff.crawler;
 
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -10,16 +11,17 @@ import java.util.Queue;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 public class Crawler {
 
     private Queue<String> urlQueue;
     private List<String> visitedURLs;
 
+
     public Crawler() {
         urlQueue = new LinkedList<>();
         visitedURLs = new ArrayList<>();
     }
-
 
     public void crawl(String rootURL, int breakpoint) {
         urlQueue.add(rootURL);
@@ -71,7 +73,6 @@ public class Crawler {
                 System.out.println("Crawler URL results: " + actualURL);
                 urlQueue.add(actualURL);
             }
-
             // exit the loop.
             if(breakpoint == 0){
                 break;
@@ -80,7 +81,6 @@ public class Crawler {
         }
         return breakpoint;
     }
-
 
 }
 

@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
 public class PortScanner {
 
 
-    public static void main(String[] args) throws IOException {
+    public void portScanner() {
         PortScanner portScanner = new PortScanner();
         try {
             portScanner.PortScan("8.8.8.8", 300);
@@ -29,6 +29,8 @@ public class PortScanner {
             throw new RuntimeException(e);
         }
     }
+
+
     public Queue PortScan(String ip, int maxPortNum) throws IOException {
         ConcurrentLinkedQueue openPorts = new ConcurrentLinkedQueue<>();
         ExecutorService executorService = Executors.newFixedThreadPool(20);
